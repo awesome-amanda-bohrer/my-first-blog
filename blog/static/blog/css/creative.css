@@ -270,6 +270,8 @@ header .header-content .header-content-inner p {
     position: absolute;
     margin: 0 auto;
     max-width: 650px;
+    width: 100%;
+    height: 100%;
 }
 
 .portfolio-box .portfolio-box-caption {
