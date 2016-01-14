@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.python.pydev.pythonNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>blog/static/blog/img/stomach.jpg</name>
-			<type>1</type>
-			<location>C:/Users/abohrer/Pictures/stomach.jpg</location>
-		</link>
-	</linkedResources>
 </projectDescription>
