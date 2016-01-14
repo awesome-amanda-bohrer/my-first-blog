@@ -61,8 +61,14 @@ p {
 }
 
 .text-faded {
+    color: rgba(255,255,255,.5);
+    font-size: 16px;
+}
+
+.text-faded-big {
     color: rgba(255,255,255,1);
-    font-size: 16px
+    font-size: 18px;
+    font: bold;
 }
 
 section {
