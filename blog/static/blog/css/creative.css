@@ -207,8 +207,8 @@ header .header-content .header-content-inner hr {
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
-    font-weight: 500;
-    color: rgba(0,0,0,2);
+    font-weight: 300;
+    color: rgba(0,0,0,.7);
 }
 
 @media(min-width:768px) {
