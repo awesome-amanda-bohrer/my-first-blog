@@ -6,4 +6,4 @@ def my_second_bootstrap(request):
 #
 #
 def mycontactview(request):
-    return render(request, 'boostrap/contact.html')
+    return render(request, 'bootstrap/contact.html')
