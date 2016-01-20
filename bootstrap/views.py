@@ -11,4 +11,4 @@ def mycontactview(request):
 #
 #
 def portfolio1(request):
-    return render(request, 'bootstrap/portfolio-1col.html')
+    return render(request, 'bootstrap/portfolio-1-col.html')
