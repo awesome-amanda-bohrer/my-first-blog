@@ -15,3 +15,5 @@ def myportfolio1(request):
 #
 #
 #
+def myblog1(request):
+    return render(request, 'bootstrap/blog-home-1.html')
