@@ -15,20 +15,3 @@ def myportfolio1(request):
 #
 #
 #
-def myportfolio2(request):
-    return render(request, 'bootstrap/portfolio-2-col.html')
-#
-#
-#
-def myportfolio3(request):
-    return render(request, 'bootstrap/portfolio-3-col.html')
-#
-#
-#
-def myportfolio4(request):
-    return render(request, 'bootstrap/portfolio-4-col.html')
-#
-#
-#
-def myportfolio(request):
-    return render(request, 'bootstrap/portfolio-item.html')
