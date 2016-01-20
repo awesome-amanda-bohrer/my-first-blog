@@ -10,25 +10,25 @@ def mycontactview(request):
 #
 #
 #
-def portfolio1(request):
+def myportfolio1(request):
     return render(request, 'bootstrap/portfolio-1-col.html')
 #
 #
 #
-def portfolio2(request):
+def myportfolio2(request):
     return render(request, 'bootstrap/portfolio-2-col.html')
 #
 #
 #
-def portfolio3(request):
+def myportfolio3(request):
     return render(request, 'bootstrap/portfolio-3-col.html')
 #
 #
 #
-def portfolio4(request):
+def myportfolio4(request):
     return render(request, 'bootstrap/portfolio-4-col.html')
 #
 #
 #
-def portfolio(request):
+def myportfolio(request):
     return render(request, 'bootstrap/portfolio-item.html')
