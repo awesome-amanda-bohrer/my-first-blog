@@ -7,3 +7,8 @@ def my_second_bootstrap(request):
 #
 def mycontactview(request):
     return render(request, 'bootstrap/contact.html')
+#
+#
+#
+def portfolio1(request):
+    return render(request, 'bootstrap/portfolio-1col.html')
