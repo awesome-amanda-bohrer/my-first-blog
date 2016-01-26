@@ -17,7 +17,8 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^boot/', include(admin.site.urls)),
     url(r'', include('blog.urls')),
     url(r'', include('bootstrap.urls')),
+    url(r'', include('bohrer.urls')),
 ]
