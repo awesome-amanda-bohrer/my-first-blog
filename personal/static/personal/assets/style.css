@@ -24,9 +24,9 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .btn{border:none;border-radius: 0;padding: 1em 4em;background: rgba(0,0,0,0.5);text-transform: uppercase;}
 .btn:hover,.btn:active{color: #fff;}
 .btn-default{color: #bcbec0;border: 1px solid #aaa;}
-.btn-default:hover,.btn-default:active{background: rgba(0,0,0,0.8);}
+.btn-default:hover,.btn-default:active{background: rgba(0,74,63,0.8);}
 .btn-primary{color: #fff;background:#636466;width: 100%;outline: none;}
-.btn-primary:hover,.btn-primary:active,.btn-primary:focus{background:#333;box-shadow: none;}
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus{background:#004a3f;box-shadow: none;}
 
 
 
@@ -69,7 +69,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .contactform textarea,.contactform input{width: 100%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
 /*contact*/
 
-.footer{background-color: #00337f; color: #fff; font-size: 1em;color: #bcbec0;}
+.footer{background-color: #004a3f; color: #fff; font-size: 1em;color: #bcbec0;}
 .footer a{color: #aaa;margin: 0 1em; }
 
 .gototop{position: fixed;bottom: 20px; right: 20px;background: rgba(0,0,0,0.5);padding: 10px;color: #fff;}
