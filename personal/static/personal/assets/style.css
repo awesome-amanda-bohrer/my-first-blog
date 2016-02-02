@@ -69,7 +69,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .contactform textarea,.contactform input{width: 100%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
 /*contact*/
 
-.footer{background-color: #004a3f; color: #fff; font-size: 1em;color: #bcbec0;}
+.footer{background-color: #a73f10; color: #fff; font-size: 1em;color: #bcbec0;}
 .footer a{color: #aaa;margin: 0 1em; }
 
 .gototop{position: fixed;bottom: 20px; right: 20px;background: rgba(0,0,0,0.5);padding: 10px;color: #fff;}
