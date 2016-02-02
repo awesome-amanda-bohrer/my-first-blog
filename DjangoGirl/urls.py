@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'', include('blog.urls')),
     url(r'', include('bootstrap.urls')),
     url(r'', include('bohrer.urls')),
+    url(r'', include('webapp.urls')),
 ]

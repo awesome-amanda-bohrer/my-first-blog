@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'bootstrap',
     'bohrer',
+    'webapp',
 ]
 
 MIDDLEWARE_CLASSES = [
