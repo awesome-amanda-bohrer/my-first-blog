@@ -1,4 +1,4 @@
-body {	color:#fff;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/back.jpg) right no-repeat fixed #fff;background-size: cover; -webkit-font-smoothing:antialiased;}
+body {	color:#fff;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/back.jpg) right no-repeat fixed #bcbec0;background-size: cover; -webkit-font-smoothing:antialiased;}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
