@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'', include('bohrer.urls')),
     url(r'', include('webapp.urls')),
     url(r'', include('personal.urls')),
-     url(r'', include('dash.urls')),
+    url(r'', include('hello.urls')),
 ]
 
