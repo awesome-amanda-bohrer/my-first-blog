@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bohrer',
     'webapp',
     'personal',
+    'dash',
 ]
 
 MIDDLEWARE_CLASSES = [
