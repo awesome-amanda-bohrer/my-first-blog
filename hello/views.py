@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
 def my_dashboard(request):
-    return render(request, 'hello/template.html')
-#
-#
-#
-def dashboard(request):
     return render(request, 'hello/dashboard.html')
+#
+#
+#
+def template(request):
+    return render(request, 'hello/template.html')
 #
 #
 #

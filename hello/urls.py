@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     url(r'^(?i)hello/$',                   views.my_dashboard,      name='hello'        ),
-    url(r'^(?i)hello/dashboard/$',         views.dashboard,         name='dashboard'    ),
+    url(r'^(?i)hello/template/$',          views.template,          name='template'     ),
     url(r'^(?i)hello/icons/$',             views.icons,             name='icons'        ),
     url(r'^(?i)hello/maps/$',              views.maps,              name='maps'         ),
     url(r'^(?i)hello/notifications/$',     views.notifications,     name='notifications'),
