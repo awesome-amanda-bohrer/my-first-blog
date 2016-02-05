@@ -466,7 +466,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
