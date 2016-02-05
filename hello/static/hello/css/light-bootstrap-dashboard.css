@@ -1635,6 +1635,8 @@ body > .navbar-collapse[data-color="purple"]:after {
 .footer {
   background-color: #FFFFFF;
   line-height: 20px;
+  height: 40px
+  margin-top: -40px
 }
 .footer nav > ul {
   list-style: none;
