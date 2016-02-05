@@ -1633,6 +1633,8 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
   background-color: #FFFFFF;
   line-height: 20px;
   height: 40px
