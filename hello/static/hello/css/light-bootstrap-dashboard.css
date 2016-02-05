@@ -459,6 +459,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   float: right;
   width: calc(100% - 260px);
   min-height: 100%;
+  margin-bottom: 60px;
 }
 .main-panel > .content {
   padding: 30px 15px;
@@ -466,6 +467,11 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
 .main-panel .navbar {
   margin-bottom: 0;
