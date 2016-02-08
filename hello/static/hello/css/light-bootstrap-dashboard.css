@@ -218,7 +218,7 @@ input:focus {
   display: block;
   z-index: 1;
   color: #fff;
-  font-weight: 200;
+  font-weight: 600;
   background-size: cover;
   background-position: center center;
 }
@@ -242,7 +242,7 @@ input:focus {
   background-position: center center;
 }
 .sidebar .logo {
-  padding: 10px 15px;
+  padding: 10px 9px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .sidebar .logo p {
@@ -296,9 +296,9 @@ input:focus {
 }
 .sidebar .nav p {
   margin: 0;
-  line-height: 30px;
-  font-size: 10px;
-  font-weight: 350;
+  line-height: 40px;
+  font-size: 11px;
+  font-weight: 450;
   text-transform: uppercase;
 }
 .sidebar .nav i {
