@@ -197,7 +197,7 @@
                 <div class="col-xs-5">
                   <select class="form-control" id="analysis-tab" name="film-coefficient">
                     	<option selected>CALC | Calculated from input fluid and process conditions </option>
-                    	<option disabled>USER | User specified film coefficients  </option>
+                    	<option>         USER | User specified film coefficients  </option>
                     </select>
            		</div>
             </div>
@@ -207,7 +207,7 @@
                 <div class="col-xs-5">
                   <select class="form-control" id="analysis-tab" name="generate-plots">
                     	<option selected>NO </option>
-                    	<option disabled>YES </option>
+                    	<option>         YES </option>
                     </select>
            		</div>
             </div>
@@ -217,7 +217,7 @@
                 <div class="col-xs-5">
                   <select class="form-control" id="analysis-tab" name="advanced-settings">
                     	<option selected>NO </option>
-                    	<option disabled>YES </option>
+                    	<option>         YES </option>
                     </select>
            		</div>
             </div>
@@ -229,7 +229,7 @@
                 <div class="col-xs-5">
                     <select class="form-control" id="material-tab" name="material-properties">
                     	<option selected>General | General material groups</option>
-                    	<option disabled>Database| Properties derived from a material specification </option>
+                    	<option>         Database| Properties derived from a material specification </option>
                     	<option>		 User	 | User specified material properties</option>
                     </select>
                 </div>
@@ -239,7 +239,7 @@
                 <div class="col-xs-5">
                   <select class="form-control" id="material-tab" name="material-category">
                     	<option selected>CS | Carbon steel</option>
-                    	<option disabled>SS | AISI Type 304 stainless steel</option>
+                    	<option>         SS | AISI Type 304 stainless steel</option>
                     </select>
                 </div>
           </div>
@@ -248,10 +248,26 @@
                 <div class="col-xs-5">
                   <select class="form-control" id="material-tab" name="material-category">
                     	<option selected>CS | Carbon steel</option>
-                    	<option disabled>SS | AISI Type 304 stainless steel</option>
+                    	<option> 		 SS | AISI Type 304 stainless steel</option>
                     </select>
                 </div>
           </div>
+          <div class="form-group">
+        		 <h2><strong> Run Pipe Carbon Equivalent</strong></h2>
+                <label class="col-xs-3 control-label">Carbon equivalent basis</label>
+                <div class="col-xs-5">
+                    <select class="form-control" id="material-tab" name="carbon-properties">
+                    	<option selected>Specify | Specify the Carbon Equivalent</option>
+                    	<option>         Element | Calculate the Carbon Equivalent </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Carbon equivalent</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="carbon" />
+                </div>
+            </div>
 	</div>  
 	</form>  
 
