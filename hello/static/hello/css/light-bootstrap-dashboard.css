@@ -477,11 +477,13 @@ body > .navbar-collapse[data-color="purple"]:after {
 .main-panel .navbar {
   margin-bottom: 0;
 }
-.account-form {
+.main-panel .account-form {
 	margin-top:15px;
 }
-.account-form > .tab-content {
-	margin-top: 15px;
+.main-panel > .tab-content {
+	padding: 30px 15px;
+	margin-bottom: 60px
+	min-height: calc(100% - 123px);
 }
 .account-form > .form-group {
 	margin-top: 15px;
