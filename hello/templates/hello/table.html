@@ -171,12 +171,12 @@
 
 
     <ul class="nav nav-tabs">
-    <li class="active"><a href="#analysis-tab" data-toggle="tab">Analysis Control <i class="fa"></i></a></li>
-    <li><a href="#material-tab" data-toggle="tab">Material Properties <i class="fa"></i></a></li>
-    <li><a href="#hottap-tab" data-toggle="tab">Hot Tap Geometry <i class="fa"></i></a></li>
-    <li><a href="#welding-tab" data-toggle="tab">Welding Parameters <i class="fa"></i></a></li>
-    <li><a href="#process-tab" data-toggle="tab">Process and Ambient Conditions <i class="fa"></i></a></li>
-    <li><a href="#fluid-tab" data-toggle="tab">Fluid Property Definition <i class="fa"></i></a></li>
+    <li class="active"><a href="#analysis-tab" data-toggle="tab"><strong>Analysis Control</strong> <i class="fa"></i></a></li>
+    <li><a href="#material-tab" data-toggle="tab"><strong>Material Properties</strong> <i class="fa"></i></a></li>
+    <li><a href="#hottap-tab" data-toggle="tab"><strong>Hot Tap Geometry</strong> <i class="fa"></i></a></li>
+    <li><a href="#welding-tab" data-toggle="tab"><strong>Welding Parameters</strong> <i class="fa"></i></a></li>
+    <li><a href="#process-tab" data-toggle="tab"><strong>Process and Ambient Conditions</strong> <i class="fa"></i></a></li>
+    <li><a href="#fluid-tab" data-toggle="tab"><strong>Fluid Property Definition</strong> <i class="fa"></i></a></li>
 </ul>
 
 <form id="accountForm" method="post" class="form-horizontal">
@@ -191,6 +191,7 @@
                     </select>
                 </div>
             </div>
+            
             <div class="form-group">
                 <label class="col-xs-3 control-label">Film coefficient source</label>
                 <div class="col-xs-5">
@@ -200,6 +201,7 @@
                     </select>
            		</div>
             </div>
+            
               <div class="form-group">
                 <label class="col-xs-3 control-label">Generate plots</label>
                 <div class="col-xs-5">
@@ -220,7 +222,36 @@
            		</div>
             </div>
         </div> 
-        
+                <div class="tab-pane" id="material-tab">
+        		<div class="form-group">
+        		 <h2><strong> Material Options</strong></h2>
+                <label class="col-xs-3 control-label">Material property source</label>
+                <div class="col-xs-5">
+                    <select class="form-control" id="material-tab" name="material-properties">
+                    	<option selected>General | General material groups</option>
+                    	<option disabled>Database| Properties derived from a material specification </option>
+                    	<option>		 User	 | User specified material properties</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Run pipe material</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="material-tab" name="material-category">
+                    	<option selected>CS | Carbon steel</option>
+                    	<option disabled>SS | AISI Type 304 stainless steel</option>
+                    </select>
+                </div>
+          </div>
+           <div class="form-group">
+                <label class="col-xs-3 control-label">Sleeve material</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="material-tab" name="material-category">
+                    	<option selected>CS | Carbon steel</option>
+                    	<option disabled>SS | AISI Type 304 stainless steel</option>
+                    </select>
+                </div>
+          </div>
 	</div>  
 	</form>  
 
