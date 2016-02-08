@@ -174,86 +174,58 @@
             </div>
         </nav>
 
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#analysis-tab" data-toggle="tab">Analysis Control <i class="fa"></i></a></li>
+    <li><a href="#material-tab" data-toggle="tab">Material Properties <i class="fa"></i></a></li>
+    <li><a href="#hottap-tab" data-toggle="tab">Hot Tap Geometry <i class="fa"></i></a></li>
+    <li><a href="#welding-tab" data-toggle="tab">Welding Parameters <i class="fa"></i></a></li>
+    <li><a href="#process-tab" data-toggle="tab">Process and Ambient Conditions <i class="fa"></i></a></li>
+    <li><a href="#fluid-tab" data-toggle="tab">Fluid Property Definition <i class="fa"></i></a></li>
+</ul>
 
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-					<div class="col-md-8 col-md-offset-2">
-                        <div class="card">
-                            <div class="header text-center">
-                                <h4 class="title">Light Bootstrap Dashboard PRO</h4>
-                                <p class="category">Are you looking for more components? Please check our Premium Version of Light Bootstrap Dashboard.</p>
-								<br>
-                            </div>
-                            <div class="content table-responsive table-full-width table-upgrade">
-                                <table class="table">
-                                    <thead>
-                                        <th></th>
-                                    	<th class="text-center">Free</th>
-                                    	<th class="text-center">PRO</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        	<td>Components</td>
-                                        	<td>16</td>
-                                        	<td>115+</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Plugins</td>
-                                        	<td>4</td>
-                                        	<td>14+</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Example Pages</td>
-                                        	<td>4</td>
-                                        	<td>22+</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Documentation</td>
-                                        	<td><i class="fa fa-times text-danger"></i></td>
-                                        	<td><i class="fa fa-check text-success"></td>
-                                        </tr>
-                                        <tr>
-                                        	<td>SASS Files</td>
-											<td><i class="fa fa-times text-danger"></i></td>
-                                        	<td><i class="fa fa-check text-success"></td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Login/Register/Lock Pages</td>
-											<td><i class="fa fa-times text-danger"></i></td>
-                                        	<td><i class="fa fa-check text-success"></td>
-                                        </tr>
-										<tr>
-                                        	<td>Premium Support</td>
-											<td><i class="fa fa-times text-danger"></i></td>
-                                        	<td><i class="fa fa-check text-success"></td>
-                                        </tr>
-										<tr>
-                                        	<td></td>
-											<td>Free</td>
-                                        	<td>Just $39</td>
-                                        </tr>
-										<tr>
-											<td></td>
-											<td>
-												<a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a>
-											</td>
-											<td>
-												<a target="_blank" href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro/?ref=lbdupgrade" class="btn btn-round btn-fill btn-info">Upgrade to PRO</a>
-											</td>
-										</tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
+<form id="accountForm" method="post" class="form-horizontal">
+    <div class="tab-content">
+        <div class="tab-pane active" id="analysis-tab">
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Metric Flag</label>
+                <div class="col-xs-5">
+                 <select class="form-control" id="analysis-tab" name="metric-flag">
+                    	<option selected>NO</option>
+                    </select>
                 </div>
-
             </div>
-        </div>
-
-
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Film coefficient source</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="analysis-tab" name="film-coefficient">
+                    	<option selected>CALC|Calculated from input fluid and process conditions </option>
+                    	<option disabled>USER|User specified film coefficients  </option>
+                    </select>
+           		</div>
+            </div>
+              <div class="form-group">
+                <label class="col-xs-3 control-label">Generate plots</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="analysis-tab" name="generate-plots">
+                    	<option selected>NO </option>
+                    	<option disabled>YES </option>
+                    </select>
+           		</div>
+            </div>
+            
+             <div class="form-group">
+                <label class="col-xs-3 control-label">Advanced settings</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="analysis-tab" name="advanced-settings">
+                    	<option selected>NO </option>
+                    	<option disabled>YES </option>
+                    </select>
+           		</div>
+            </div>
+        </div> 
+	</div>  
+	</form>  
+	
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
