@@ -872,7 +872,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 .form-control + .form-control-feedback {
   border-radius: 6px;
   font-size: 14px;
-  margin-top: -7px;
+  margin-top: 7px;
   position: absolute;
   right: 10px;
   top: 50%;
