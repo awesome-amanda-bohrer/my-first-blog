@@ -170,144 +170,57 @@
         </nav>
 
 
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Striped Table with Hover</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>ID</th>
-                                    	<th>Name</th>
-                                    	<th>Salary</th>
-                                    	<th>Country</th>
-                                    	<th>City</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        	<td>1</td>
-                                        	<td>Dakota Rice</td>
-                                        	<td>$36,738</td>
-                                        	<td>Niger</td>
-                                        	<td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>2</td>
-                                        	<td>Minerva Hooper</td>
-                                        	<td>$23,789</td>
-                                        	<td>Curaçao</td>
-                                        	<td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>3</td>
-                                        	<td>Sage Rodriguez</td>
-                                        	<td>$56,142</td>
-                                        	<td>Netherlands</td>
-                                        	<td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>4</td>
-                                        	<td>Philip Chaney</td>
-                                        	<td>$38,735</td>
-                                        	<td>Korea, South</td>
-                                        	<td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>5</td>
-                                        	<td>Doris Greene</td>
-                                        	<td>$63,542</td>
-                                        	<td>Malawi</td>
-                                        	<td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>6</td>
-                                        	<td>Mason Porter</td>
-                                        	<td>$78,615</td>
-                                        	<td>Chile</td>
-                                        	<td>Gloucester</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+    <ul class="nav nav-tabs">
+    <li class="active"><a href="#analysis-tab" data-toggle="tab">Analysis Control <i class="fa"></i></a></li>
+    <li><a href="#material-tab" data-toggle="tab">Material Properties <i class="fa"></i></a></li>
+    <li><a href="#hottap-tab" data-toggle="tab">Hot Tap Geometry <i class="fa"></i></a></li>
+    <li><a href="#welding-tab" data-toggle="tab">Welding Parameters <i class="fa"></i></a></li>
+    <li><a href="#process-tab" data-toggle="tab">Process and Ambient Conditions <i class="fa"></i></a></li>
+    <li><a href="#fluid-tab" data-toggle="tab">Fluid Property Definition <i class="fa"></i></a></li>
+</ul>
 
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-12">
-                        <div class="card card-plain">
-                            <div class="header">
-                                <h4 class="title">Table on Plain Background</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <th>ID</th>
-                                    	<th>Name</th>
-                                    	<th>Salary</th>
-                                    	<th>Country</th>
-                                    	<th>City</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        	<td>1</td>
-                                        	<td>Dakota Rice</td>
-                                        	<td>$36,738</td>
-                                        	<td>Niger</td>
-                                        	<td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>2</td>
-                                        	<td>Minerva Hooper</td>
-                                        	<td>$23,789</td>
-                                        	<td>Curaçao</td>
-                                        	<td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>3</td>
-                                        	<td>Sage Rodriguez</td>
-                                        	<td>$56,142</td>
-                                        	<td>Netherlands</td>
-                                        	<td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>4</td>
-                                        	<td>Philip Chaney</td>
-                                        	<td>$38,735</td>
-                                        	<td>Korea, South</td>
-                                        	<td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>5</td>
-                                        	<td>Doris Greene</td>
-                                        	<td>$63,542</td>
-                                        	<td>Malawi</td>
-                                        	<td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>6</td>
-                                        	<td>Mason Porter</td>
-                                        	<td>$78,615</td>
-                                        	<td>Chile</td>
-                                        	<td>Gloucester</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-
-
+<form id="accountForm" method="post" class="form-horizontal">
+    <div class="tab-content">
+        <div class="tab-pane active" id="analysis-tab">
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Metric Flag</label>
+                <div class="col-xs-5">
+                 <select class="form-control" id="analysis-tab" name="metric-flag">
+                    	<option selected>NO</option>
+                    </select>
                 </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Film coefficient source</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="analysis-tab" name="film-coefficient">
+                    	<option selected>CALC|Calculated from input fluid and process conditions </option>
+                    	<option disabled>USER|User specified film coefficients  </option>
+                    </select>
+           		</div>
+            </div>
+              <div class="form-group">
+                <label class="col-xs-3 control-label">Generate plots</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="analysis-tab" name="generate-plots">
+                    	<option selected>NO </option>
+                    	<option disabled>YES </option>
+                    </select>
+           		</div>
+            </div>
+            
+             <div class="form-group">
+                <label class="col-xs-3 control-label">Advanced settings</label>
+                <div class="col-xs-5">
+                  <select class="form-control" id="analysis-tab" name="advanced-settings">
+                    	<option selected>NO </option>
+                    	<option disabled>YES </option>
+                    </select>
+           		</div>
+            </div>
+        </div> 
+	</div>  
+	</form>  
 
         <footer class="footer">
             <div class="container-fluid">
