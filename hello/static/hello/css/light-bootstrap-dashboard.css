@@ -480,7 +480,12 @@ body > .navbar-collapse[data-color="purple"]:after {
 .account-form {
 	margin-top:15px;
 }
-
+.account-form > .tab-content {
+	margin-top: 15px;
+}
+.account-form > .form-group {
+	margin-top: 15px;
+}	
 .sidebar,
 .main-panel {
   overflow: auto;
