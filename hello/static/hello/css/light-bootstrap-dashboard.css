@@ -477,18 +477,12 @@ body > .navbar-collapse[data-color="purple"]:after {
 .main-panel .navbar {
   margin-bottom: 0;
 }
-.nav-tabs>li {
-	float: left;
-	margin-bottom: -1px;
-}
-.main-panel > .tab-content {
+.main-panel .tab-content {
 	padding: 30px 15px;
-	margin-bottom: 60px
+	margin-bottom: 60px;
 	min-height: calc(100% - 123px);
 }
-.accountForm > .form-group {
-	margin-top: 15px;
-}	
+
 .sidebar,
 .main-panel {
   overflow: auto;
