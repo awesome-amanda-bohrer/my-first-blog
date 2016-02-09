@@ -113,7 +113,7 @@ h1 .subtitle {
 }
 
 .text-primary, .text-primary:hover {
-  color: #1D62F0 !important;
+  color: #00337f !important;
 }
 
 .text-info, .text-info:hover {
@@ -121,15 +121,15 @@ h1 .subtitle {
 }
 
 .text-success, .text-success:hover {
-  color: #87CB16 !important;
+  color: #005500 !important;
 }
 
 .text-warning, .text-warning:hover {
-  color: #FF9500 !important;
+  color: #990000 !important;
 }
 
 .text-danger, .text-danger:hover {
-  color: #FF4A55 !important;
+  color: #a73f10 !important;
 }
 
 /*     General overwrite     */
@@ -467,7 +467,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 .main-panel > .footer {
   border-top: 1px solid #BCBEC0;
-  position: fixed;
+  position: absolute;
   width: calc(100% - 260px);
   left: 0;
   bottom: 0;
