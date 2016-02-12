@@ -467,7 +467,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 .main-panel > .footer {
   border-top: 1px solid #BCBEC0;
-  position: absolute;
+  position: relative;
   width: 100%;
   left: 0;
   bottom: auto;
