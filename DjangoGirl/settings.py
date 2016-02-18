@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'webapp',
     'personal',
     'hello',
+    'hottap',
 ]
 
 MIDDLEWARE_CLASSES = [
