@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.conf.urls import include
 urlpatterns = [
     url(r'^boot/',          include(admin.site.urls))   ,
-    url(r'^washington/',    include('hello.urls'))      ,
     url(r'^hottap/'     ,   include('hottap.urls'))     ,
 ]
 
