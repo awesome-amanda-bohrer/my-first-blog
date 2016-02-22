@@ -130,3 +130,8 @@ def my_wizard1(request):
 #
 #
 #
+def my_regular2(request):
+    return render(request, 'hottap/regulartable.html')
+#
+#
+#

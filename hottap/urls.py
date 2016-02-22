@@ -26,5 +26,7 @@ urlpatterns = [
     url(r'^(?i)validation/$',       views.my_validation1,          name='validation'   ),
     url(r'^(?i)vector/$',           views.my_vector1,              name='vector'       ),
     url(r'^(?i)wizard/$',           views.my_wizard1,              name='wizard'       ),
+    url(r'^(?i)regular/$',          views.my_regular1,             name='regular'      ),
+    url(r'^(?i)regulartable/$',     views.my_regular2,             name='regulartable' ),
     ]
 
