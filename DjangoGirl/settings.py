@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'hello',
     'hottap',
     'fatigue',
+    'corrosion',
 ]
 
 MIDDLEWARE_CLASSES = [

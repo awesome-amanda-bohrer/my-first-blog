@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^boot/'       ,   include(admin.site.urls))   ,
     url(r'^hottap/'     ,   include('hottap.urls'))     ,
     url(r'^fatigue/'    ,   include('fatigue.urls'))    ,
+    url(r'^corrosion/'  ,   include('corrosion.urls'))  ,
 ]
 
