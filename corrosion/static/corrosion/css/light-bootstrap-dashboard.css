@@ -3176,7 +3176,7 @@ legend {
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
-  margin-right: -17px;
+  margin-right: -21px;
   padding-right: 17px;
   z-index: 4;
   height: calc(100vh - 64px);
