@@ -135,3 +135,8 @@ def my_regular6(request):
 #
 #
 #
+def my_extended5(request):
+    return render(request, 'corrosion/extendedtable.html')
+#
+#
+#

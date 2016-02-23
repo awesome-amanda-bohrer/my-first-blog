@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^(?i)wizard/$',           views.my_wizard1,              name='wizard'       ),
     url(r'^(?i)regular/$',          views.my_regular1,             name='regular'      ),
     url(r'^(?i)regulartable/$',     views.my_regular2,             name='regulartable' ),
+    url(r'^(?i)extendedtable/$',    views.my_extended4,            name='extended'     ),
     ]
 

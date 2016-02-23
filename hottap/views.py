@@ -135,3 +135,8 @@ def my_regular2(request):
 #
 #
 #
+def my_extended4(request):
+    return render(request, 'hottap/extendedtable.html')
+#
+#
+#

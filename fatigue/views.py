@@ -135,3 +135,8 @@ def my_regular4(request):
 #
 #
 #
+def my_extended3(request):
+    return render(request, 'fatigue/extendedtable.html')
+#
+#
+#
