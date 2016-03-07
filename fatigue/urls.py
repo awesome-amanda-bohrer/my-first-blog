@@ -1,8 +1,24 @@
-from django.conf.urls   import url
+from django.conf.urls.defaults   import url
 from .                  import views
 
 urlpatterns = [
-    url(r'^$',                      views.my_dashboard2,           name='dashboard'    ),
+    url(r'^$',                      views.my_fatigue,              name='fatigue'       ),
+    url(r'^(?i)modelwizard/$',      views.my_modelwizard,          name='modelwizard'   ),
+    url(r'^(?i)modelselection/$',   views.my_modelselection,       name='modelselection'),
+    url(r'^(?i)uniaxial/$',         views.my_uniaxial,             name='uniaxial'     ),
+    url(r'^(?i)uniaxial/uniplasticity/$',    views.my_uniplasticity,        name='uniplasticity'   ),
+    url(r'^(?i)uniaxial/unicycle/$',         views.my_unicycle,             name='unicycle'   ),
+    url(r'^(?i)uniaxial/unidamage/$',        views.my_unidamage,            name='unidamage'   ),
+    url(r'^(?i)uniaxial/uniresults/$',        views.my_uniresults,            name='uniresults'   ),
+    url(r'^(?i)multiaxial/$',       views.my_multiaxial,           name='multiaxial'   ),
+    url(r'^(?i)user/$',             views.my_user,                 name='user'   ),
+    url(r'^(?i)settings/$',         views.my_settings,             name='settings'   ),
+    url(r'^(?i)software/$',         views.my_software,             name='software'   ),
+
+    '''
+    url(r'^(?i)uniaxial/$',         views.my_uniaxial,             name='uniaxial'     ),
+    url(r'^(?i)uniplasticity/$',    views.my_uniplasticity,        name='uniplasticity'   ),
+    url(r'^(?i)unicycle/$',         views.my_unicycle,             name='unicycle'   ),
     url(r'^(?i)template/$',         views.my_template2,            name='template'     ),
     url(r'^(?i)buttons/$',          views.my_buttons2,             name='buttons'      ),
     url(r'^(?i)calendar/$',         views.my_calendar2,            name='calendar'     ),
@@ -28,7 +44,9 @@ urlpatterns = [
     url(r'^(?i)wizard/$',           views.my_wizard2,              name='wizard'       ),
     url(r'^(?i)regular/$',          views.my_regular3,             name='regular'      ),
     url(r'^(?i)regulartable/$',     views.my_regular4,             name='regulartable' ),
-    url(r'^(?i)extendedtable/$',    views.my_extended3,            name='extended'     ),
+    url(r'^(?i)uniaxial/$',         views.my_uniaxial,             name='uniaxial'     ),
+    url(r'^(?i)multiaxial/$',       views.my_multiaxial,           name='multiaxial'   ),
+    '''
     ]
 
 

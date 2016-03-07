@@ -1,10 +1,412 @@
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response
+from django.template import RequestContext
+from models import InputForm,UploadModel
+from forms import UploadForm
+import os,glob
 
-def my_dashboard2(request):
-    return render(request, 'fatigue/dashboard.html')
+def my_fatigue(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('uniplasticity')
+        CycleIdentifier         = request.POST.getlist('unicycle')
+        DamageIdentifier        = request.POST.getlist('unidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm(request.POST, request.FILES)
+            FileName   = request.FILES['upload']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel(upload = request.FILES['upload'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm()
+        formupload = UploadForm()
+
+    return render_to_response('fatigue/fatigue.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_modelwizard(request):
+    return render(request, 'fatigue/modelwizard.html')
+#
+def my_modelselection(request):
+    return render(request, 'fatigue/modelselection.html')
 #
 #
 #
+def my_uniaxial(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('uniplasticity')
+        CycleIdentifier         = request.POST.getlist('unicycle')
+        DamageIdentifier        = request.POST.getlist('unidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm(request.POST, request.FILES)
+            FileName   = request.FILES['upload']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel(upload = request.FILES['upload'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm()
+        formupload = UploadForm()
+
+    return render_to_response('fatigue/uniaxial.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+
+def my_uniplasticity(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('uniplasticity')
+        CycleIdentifier         = request.POST.getlist('unicycle')
+        DamageIdentifier        = request.POST.getlist('unidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm(request.POST, request.FILES)
+            FileName   = request.FILES['upload']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel(upload = request.FILES['upload'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm()
+        formupload = UploadForm()
+
+    return render_to_response('fatigue/uniplasticity.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_unicycle(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('uniplasticity')
+        CycleIdentifier         = request.POST.getlist('unicycle')
+        DamageIdentifier        = request.POST.getlist('unidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm(request.POST, request.FILES)
+            FileName   = request.FILES['upload']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel(upload = request.FILES['upload'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm()
+        formupload = UploadForm()
+
+
+    return render_to_response('fatigue/unicycle.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_unidamage(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('uniplasticity')
+        CycleIdentifier         = request.POST.getlist('unicycle')
+        DamageIdentifier        = request.POST.getlist('unidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm(request.POST, request.FILES)
+            FileName   = request.FILES['upload']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel(upload = request.FILES['upload'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm()
+        formupload = UploadForm()
+
+    return render_to_response('fatigue/unidamage.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_uniresults(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('uniplasticity')
+        CycleIdentifier         = request.POST.getlist('unicycle')
+        DamageIdentifier        = request.POST.getlist('unidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm(request.POST, request.FILES)
+            FileName   = request.FILES['upload']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel(upload = request.FILES['upload'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm()
+        formupload = UploadForm()
+
+    return render_to_response('fatigue/uniresults.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+#
+#
+def my_multiaxial(request):
+    return render(request, 'fatigue/multiaxial.html')
+#
+#
+#
+def my_user(request):
+    return render(request, 'fatigue/user.html')
+#
+#
+#
+def my_settings(request):
+    return render(request, 'fatigue/settings.html')
+#
+#
+#
+def my_software(request):
+    return render(request, 'fatigue/software.html')
+#
+#
+#
+
+
+
+
+'''
 def my_template2(request):
     return render(request, 'fatigue/template.html')
 #
@@ -100,6 +502,16 @@ def my_sweetalert2(request):
 #
 #
 #
+def my_uniaxial(request):
+    return render(request, 'fatigue/uniaxial.html')
+#
+#
+#
+def my_multiaxial(request):
+    return render(request, 'fatigue/multiaxial.html')
+#
+#
+#
 def my_regular3(request):
     return render(request, 'fatigue/regular.html')
 #
@@ -135,8 +547,4 @@ def my_regular4(request):
 #
 #
 #
-def my_extended3(request):
-    return render(request, 'fatigue/extendedtable.html')
-#
-#
-#
+'''

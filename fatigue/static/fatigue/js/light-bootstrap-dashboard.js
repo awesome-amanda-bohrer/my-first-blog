@@ -65,6 +65,12 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(e){
+    		$(".img-check").click(function(){
+				$(this).toggleClass("check");
+			});
+	});
+
 // activate mobile menus when the windows is resized
 $(window).resize(function(){
     if($(window).width() <= 991){

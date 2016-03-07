@@ -44,8 +44,9 @@ INSTALLED_APPS = [
     'personal',
     'hello',
     'hottap',
-    'fatigue',
+    'fatigue_test',
     'corrosion',
+    'fatigue',
 ]
 
 MIDDLEWARE_CLASSES = [

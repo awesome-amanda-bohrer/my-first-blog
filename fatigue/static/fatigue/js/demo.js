@@ -511,6 +511,68 @@ demo = {
     	}
 	},
 
+	Icon: function(type){
+    	if(type == 'uniaxial'){
+        	swal("Uniaxial Loading History",
+        	     "A loading history where the variation of stress or strain, over time, can be represented by a single parameter. For proportional loadings we may also perform plasticity correction, cycle counting, and fatigue damage assessment procedures on the individual components using the uniaxial algorithms. If the orientations of the principal axes are fixed during cyclic loading, the loading is called proportional. An example of proportional loading is a nozzle in a pressure vessel subject to internal pressure and an external bending moment vector that does not change direction with each cycle.")
+
+    	}else if(type == 'multiaxial'){
+        	swal("Multiaxial Loading History", "A loading history where the variation in time of loading, stress or strain, cannot be represented by a single parameter. Multiaxial loading can be either proportional or non-proportional. A stress/strain tensor is used to contain the components of the multiaxial load at each point in time. If the orientations of the principal axes are not fixed during cyclic loading, the loading is called non-proportional. An example of non-proportional loading is a nozzle in a pressure vessel subject to internal pressure and an external bending moment vector that changes direction with each cycle.")
+
+    	}else if(type == 'uniplasticity'){
+        	swal("Uniaxial Elastic Loading History", "The input file format must be .txt or .csv. The first column contains the time integer points, the second column contains the elastic stress (MPa), and the third column the elastic strain.")
+
+    	}else if(type == 'uniplasticity1'){
+        	swal("Uniaxial Elastic Loading History", "The input file format must be .txt or .csv. The first column contains the time integer points, the second column contains the elastic stress (MPa), and the third column the elastic strain.")
+
+    	}else if(type == 'success-message'){
+        	swal("Good job!", "You clicked the button!", "success")
+
+    	}else if(type == 'warning-message-and-cofirmation'){
+        	swal({  title: "Are you sure?",
+            	    text: "You will not be able to recover this imaginary file!",
+            	    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn btn-success btn-fill",
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonClass: "btn btn-default",
+                    closeOnConfirm: false,
+                },function(){
+                    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                });
+
+    	}else if(type == 'warning-message-and-cancel'){
+        	swal({  title: "Are you sure?",
+            	    text: "You will not be able to recover this imaginary file!",
+            	    type: "warning",
+            	    showCancelButton: true,
+            	    confirmButtonText: "Yes, delete it!",
+            	    cancelButtonText: "No, cancel plx!",
+            	    closeOnConfirm: false,
+            	    closeOnCancel: false
+                },function(isConfirm){
+                    if (isConfirm){
+                        swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                    }else{
+                        swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    }
+                });
+
+    	}else if(type == 'html-message'){
+        	swal({  title: "This is plain HTML Code!",
+            	    text: 'You can show HTML tags without being compiled like this one: <span style="color:#F8BB86">html<span>',
+            	    html: true
+                });
+
+    	}else if(type == 'auto-close'){
+        	swal({ title: "Auto close alert!",
+            	   text: "I will close in 2 seconds.",
+            	   timer: 2000,
+            	   showConfirmButton: false
+                });
+    	}
+	},
+
 	initFormExtendedSliders: function(){
 
         // Sliders for demo purpose in refine cards section

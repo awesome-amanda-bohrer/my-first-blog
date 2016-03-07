@@ -31,6 +31,69 @@
     -ms-transform: rotate(360deg);
   }
 }
+
+$("select").imagepicker({
+          hide_select : true,
+          show_label  : false
+        })
+
+.nav-submit-btn{
+    padding-left: 60pt;
+}
+
+.ORBox {
+  padding-top: 128pt;
+}
+
+.dashboardheader {
+  padding-left: 128pt;
+}
+
+.compute-pull-right {
+    float: right!important;
+    padding-right: 50px;
+}
+
+.navbarbackground{
+  background-color: rgb(0, 0, 0);
+}
+
+.center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:center;
+}
+
+.check
+{
+    opacity:0.25;
+	color:#996;
+
+}
+
+.nav-font{
+    color: #fff;
+}
+
+.black-font{
+    color: #000000;
+}
+
+
+.upload-center2{
+    padding-left: 33.3333334%;
+    display:center;
+}
+
+.upload-center{
+    padding-left: 15%;
+    display:center;
+}
+
+.table-sortable tbody tr {
+    cursor: move;
+}
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -237,7 +300,7 @@ Copyright (c) 2015 Daniel Eden
       line-height: 60px;
       display: block;
     }
-  
+
     p {
       font-size: 16px;
       text-align: center;
@@ -2964,7 +3027,7 @@ button.close {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: 300;
-  margin: 30px 0 15px;
+  margin: 0px 0 0px;
 }
 
 h1, .h1 {
@@ -3133,7 +3196,7 @@ input:focus {
 }
 
 .fa {
-  width: 18px;
+  width: 24px;
   text-align: center;
 }
 
@@ -3264,7 +3327,7 @@ legend {
   text-transform: uppercase;
   padding: 6px 0px;
   display: block;
-  font-size: 18px;
+  font-size: 28px;
   color: #FFFFFF;
   font-weight: 400;
   line-height: 30px;
@@ -3422,10 +3485,23 @@ legend {
   float: right;
   width: calc(100% - 260px);
   min-height: 100%;
+  padding-top: 52pt;
 }
 .main-panel > .content {
-  padding: 30px 15px;
-  min-height: calc(100% - 136px);
+  padding: 0px 20px;
+  min-height: calc(100%);
+}
+.unicontent {
+  padding: 75px 15px;
+  min-height: calc(100%);
+}
+.unicontent {
+  padding: 75px 15px;
+  min-height: calc(100%);
+}
+.main-panel > .content2 {
+  padding: 0px 20px;
+  min-height: calc(100%);
 }
 .main-panel > .content-no-padding {
   padding: 0;
@@ -3455,19 +3531,29 @@ legend {
 }
 
 .btn {
-  border-width: 1px;
+  border-width: 2px;
   background-color: transparent;
   font-weight: 400;
-  opacity: 0.8;
+  opacity: 1.0;
   filter: alpha(opacity=80);
-  padding: 8px 16px;
-  border-color: #888888;
+  padding: 2px 2px;
+  border-color: #000000;
   color: #888888;
 }
+.btn-add {
+    border-width: 2px;
+    background-color: #fff;
+    font-weight: 400;
+    opacity: 1.0;
+    filter: alpha(opacity=80);
+    padding: 2px 2px;
+    border-color: #66ff33;
+    color: #66ff33;
+}
 .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover, .open > .btn.dropdown-toggle {
-  background-color: transparent;
+  background-color: #66ff33;
   color: #797979;
-  border-color: #797979;
+  border-color: #000000;
 }
 .btn.disabled, .btn.disabled:hover, .btn.disabled:focus, .btn.disabled.focus, .btn.disabled:active, .btn.disabled.active, .btn:disabled, .btn:disabled:hover, .btn:disabled:focus, .btn:disabled.focus, .btn:disabled:active, .btn:disabled.active, .btn[disabled], .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled].focus, .btn[disabled]:active, .btn[disabled].active, fieldset[disabled] .btn, fieldset[disabled] .btn:hover, fieldset[disabled] .btn:focus, fieldset[disabled] .btn.focus, fieldset[disabled] .btn:active, fieldset[disabled] .btn.active {
   background-color: transparent;
@@ -5083,7 +5169,7 @@ star {
 
 .navbar {
   border: 0;
-  font-size: 16px;
+  font-size: 32px;
   border-radius: 0;
 }
 .navbar .navbar-brand {
@@ -5156,7 +5242,7 @@ star {
   z-index: 1031;
 }
 .navbar-fixed ~ .main-panel > .content {
-  padding-top: 90px;
+  padding-top: 0px;
   min-height: calc(100% - 71px);
 }
 
@@ -5251,7 +5337,7 @@ star {
 }
 
 .navbar-default {
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgb(0, 0, 0);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .navbar-default .navbar-nav > li > a:not(.btn) {
@@ -6075,7 +6161,7 @@ star {
       background-image: url('https://images.unsplash.com/photo-1438978280647-f359d95ebda4?q=80&fm=jpg&s=73cb1239b517411534379c92660b2660');
       background-size: cover;
       z-index: 1;
-       
+
       &:before{
           position: absolute;
           width: 94%;
@@ -6087,8 +6173,8 @@ star {
           border-radius: 6px;
           content: "";
           box-shadow: 0 3px 40px rgba(0, 0, 0, 0.2);
-          top: 24px;  
-      } 
+          top: 24px;
+      }
   */
   /*
       .footer div{
@@ -6149,6 +6235,10 @@ star {
 }
 .card .content {
   padding: 15px;
+  padding-top: 15px;
+}
+.card .contentuni {
+  padding-top: 0px;
 }
 .card .content-no-padding {
   padding: 0;
@@ -6160,6 +6250,10 @@ star {
 .card .content-full-width {
   padding: 15px 0;
 }
+.card .content-full-height {
+  padding: 0px 15px;
+}
+
 .card .header {
   padding: 15px 15px 0px;
   color: #333333;
@@ -7100,7 +7194,7 @@ star {
   }
   .main-panel > .content,
   .wrapper-full-page > .content {
-    padding: 15px 0px;
+    padding: 0px 20px;
   }
   .main-panel .card,
   .wrapper-full-page .card {
@@ -7527,7 +7621,7 @@ star {
   .navbar-header .navbar-toggle {
     margin: 10px 15px 10px 0;
     width: 40px;
-    height: 40px;
+    height: 48px;
   }
 
   .navbar-toggle .icon-bar {
@@ -7939,13 +8033,13 @@ star {
 
 .nav-text,
 .nav-icons {
-  padding: 10px 0 0;
+  padding: 0px 0 0;
 }
 .nav-text > li > a,
 .nav-icons > li > a {
   display: block;
   padding: 0px 16px;
-  color: #9A9A9A;
+  color: #FB404B;
   text-align: center;
   opacity: 0.8;
   filter: alpha(opacity=80);
@@ -7963,7 +8057,7 @@ star {
 }
 .nav-text > li.active a,
 .nav-icons > li.active a {
-  color: #23CCEF;
+  color: #447DF7;
 }
 
 .nav-icons > li {
@@ -8031,7 +8125,7 @@ star {
 }
 
 .tab-pane {
-  padding: 15px 0;
+  padding: 0px 0;
 }
 
 .nav-container {
