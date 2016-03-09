@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="user">
-                    <li class="active">
+                    <li>
                         <a data-toggle="collapse" href="#MultiaxialCollapse" class="collapse in">
                             <i class="pe-7s-graph"></i>
                             <p>Multiaxial
@@ -156,7 +156,7 @@
                                     {% if DamageIdentifier == 'yes' %}
                                         <input name="multidamage" id="item4" value="yes" class="hidden" autocomplete="off">
                                     {% endif %}
-                                    <li><a href="javascript: submitForm('#multiresultsform');">Results</a></li>
+                                    <li class='active'><a href="javascript: submitForm('#multiresultsform');">Results</a></li>
                                     </form>
                                 {% endif %}
                             </ul>
@@ -192,7 +192,7 @@
 		<div class="collapse navbar-collapse">
 
 		    <ul class="nav navbar-nav navbar-left">
-		            <h3 class='nav-font'>Uniaxial</h3>
+		            <h3 class='nav-font'>Multiaxial Results</h3>
 	        </ul>
 
 			<ul class="nav navbar-nav navbar-right">
@@ -224,83 +224,185 @@
 
     <div class="main-panel">
 
-        <div class="content" style="background-image: url('{% get_static_prefix %}homepage/RefineryBackground.png');">
+        {% if PlasticityIdentifier == 'yes' or CycleIdentifier == 'yes' or DamageIdentifier == 'yes' %}
+
+    	<div class="content" style="background-image: url('{% get_static_prefix %}homepage/RefineryBackground.png');">
             <div class="container-fluid">
-                </br>
                 <div class="row">
-                    <h1 class='text-center'>Multiaxial Welcome Page</h1>
+                    </br>
+                    <h1 class='text-center'>The "Fatigue by E2G" Multiaxial Results</h1>
                     <hr>
-                </div>
-                <div class='row'>
-                    <div class="col-md-8 col-md-offset-2">
-                        </br>
-                        <div class="card ">
-                            <div class="content">
-                                <iframe width="100%" height='500pt' src="https://www.youtube.com/embed/xiM510Wo8aQ" frameborder="0" allowfullscreen></iframe>
+                    <div class="col-md-12">
+                        </br></br>
+                        <div class="card">
+                            <div class="nav-container">
+                                </br>
+                                <ul class="nav nav-icons" role="tablist">
+                                    {% if PlasticityIdentifier == 'yes' %}
+                                    <li class="active">
+                                        <a href="#description-logo" role="tab" data-toggle="tab">
+                                            <h2>Plasticity Correction</h2>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    {% if CycleIdentifier == 'yes' %}
+                                    <li>
+                                        <a href="#map-logo" role="tab" data-toggle="tab">
+                                            <h2>Wang-Brown</h2>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#map-logo2" role="tab" data-toggle="tab">
+                                            <h2>Critical-Plane</h2>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    {% if DamageIdentifier == 'yes' %}
+                                    <li>
+                                        <a href="#legal-logo" role="tab" data-toggle="tab">
+                                            <h2>Fatigue Damage</h2>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                                <hr>
                             </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="description-logo">
+                                    <div class="header">
+                                        <h3 class="title">Multiaxial Plasticity Correction Results</h3>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class='row'>
+                                            <div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}fatigue/img/ElasticComponents.png" alt="" class="img-thumbnail">
+                        		            </div>
+                                    		<div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}fatigue/img/PlasticityCorrection.png" alt="" class="img-thumbnail">
+                            		        </div>
+                                    		<div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}fatigue/img/WBLoadingHistory.png" alt="" class="img-thumbnail">
+                            		        </div>
+                        		        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="map-logo">
+                                    <div class="header">
+                                        <h3 class="title">Multiaxial Wang-Brown Cycle Counting Results</h3>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class='row'>
+                                            <div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}fatigue/img/WBAxialShear.png" alt="" class="img-thumbnail">
+                        		            </div>
+                                    		<div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}fatigue/img/WBCC.png" alt="" class="img-thumbnail">
+                            		        </div>
+                                    		<div class="col-md-3">
+                                    		    <h3 class='text-center'>
+                                		        Cycle Count (Reversal Paths)</br>
+                                                1. [30.0, 39.972]</br>
+                                                2. [20.0, 30.0]</br>
+                                                3. [60.0, 63.858]</br>
+                                                4. [50.0, 60.0, 63.858, 65.054]</br>
+                                                5. [40.0, 50.0]</br>
+                                                6. [10.0, 20.0, 39.972, 40.0]</br>
+                                                7. [70.0, 80.0]</br>
+                                                8. [0.0, 10.0, 65.054, 70.0]</br>
+                                                </h3>
+                            		        </div>
+                        		        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="map-logo2">
+                                    <div class="header">
+                                        <h3 class="title">Multiaxial Critical-Plane Cycle Counting Results</h3>
+                                    </div>
+
+                                    <div class="content">
+                        		        <div class='row'>
+                        		            <h3 class='text-center'>
+                        		            The Critical-Plane cycles are different for each candidate plane (i.e. translation of the loading history). Since, the damage model is incorporated directly into the Critical-Plane method, we are only interested in the damage.
+                                            </h3>
+                        		        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="legal-logo">
+                                    <div class="header">
+                                        <h3 class="title">Multiaxial Fatigue Damage Results</h3>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class='row'>
+                                            <div class="col-md-6">
+                                		        <img src="{% get_static_prefix %}fatigue/img/CPDamage.png" alt="" class="img-thumbnail">
+                        		            </div>
+                                    		<div class="col-md-6">
+                                		        <img src="{% get_static_prefix %}fatigue/img/WBvsCP.png" alt="" class="img-thumbnail">
+                            		        </div>
+                        		        </div>
+                        		        <div class='row'>
+                        		            <h3 class='text-center'></br>
+                        		            Wang-Brown Damage Factor (Global Maximum Shear) = 0.00939</br>
+                                            Number of Permissible Cycles (Global Maximum Shear) = 106.55</br>
+                                            </br>
+                                            Wang-Brown Damage Factor (Critical Plane Shear Range) = 0.01985</br>
+                                            Number of Permissible Cycles (Critical Plane Shear Range) = 50.37</br>
+                                            </br>
+                                            Critical Plane Cumulative Damage Factor (Shear Range) = 0.00773</br>
+                                            Number of Permissible Cycles (Shear Range) = 129.42</br>
+                                            </h3>
+                        		        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end tab content -->
                         </div>
-                    </div>
+                    </div> <!-- end col-md-8 -->
                 </div>
-
-                {% if PlasticityIdentifier == 'yes' %}
-                    <form method=POST action="/fatigue/multiaxial/multiplasticity/" enctype="multipart/form-data">{% csrf_token %}
-                    <input name="multiplasticity" id="item4" value="yes" class="hidden" autocomplete="off">
-                    {% if CycleIdentifier == 'yes' %}
-                        <input name="multicycle" id="item4" value="yes" class="hidden" autocomplete="off">
-                    {% endif %}
-                    {% if DamageIdentifier == 'yes' %}
-                        <input name="multidamage" id="item4" value="yes" class="hidden" autocomplete="off">
-                    {% endif %}
-                    <h1 class="text-center">
-                        <input type="submit" value="Let's Get Started (Plasticity Correction)" class='btn btn-add'></form>
-                    </h1></br>
-                {% endif %}
-
-                {% if PlasticityIdentifier != 'yes' and CycleIdentifier == 'yes' %}
-                    <form method=POST action="/fatigue/multiaxial/multicycle/" enctype="multipart/form-data">{% csrf_token %}
-                    <input name="multicycle" id="item4" value="yes" class="hidden" autocomplete="off">
-                    {% if DamageIdentifier == 'yes' %}
-                        <input name="multidamage" id="item4" value="yes" class="hidden" autocomplete="off">
-                    {% endif %}
-                    <h1 class="text-center">
-                        <input type="submit" value="Let's Get Started (Cycle Counting)" class='btn btn-add'></form>
-                    </h1></br>
-                {% endif %}
-
-                {% if PlasticityIdentifier != 'yes' and CycleIdentifier != 'yes' and DamageIdentifier == 'yes' %}
-                    <form method=POST action="/fatigue/multiaxial/multidamage/" enctype="multipart/form-data">{% csrf_token %}
-                    <input name="multidamage" id="item4" value="yes" class="hidden" autocomplete="off">
-                    <h1 class="text-center">
-                        <input type="submit" value="Let's Get Started (Fatigue Damage)" class='btn btn-add'></form>
-                    </h1></br>
-                {% endif %}
+                <h1 class="text-right">
+                    <a href='/fatigue/modelselection/' class='btn btn-add'>NEW MODEL!</a>
+                </h1>
             </div>
         </div>
+        {% endif %}
 
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
                         <li>
-                            <a href="/fatigue/">
-                                Dashboard
+                            <a href="#">
+                                Home
                             </a>
                         </li>
                         <li>
-                            <a href="www.equityeng.com">
+                            <a href="#">
                                 Company
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.equityeng.com/about-us/mission-vision/">
+                            <a href="#">
                                 Portfolio
                             </a>
                         </li>
                         <li>
-                            <a href="/contact/">
-                               Contact Us
+                            <a href="#">
+                               Blog
                             </a>
                         </li>
+                        {% comment %}
+                        <li>
+                            <a href="#multiresultscontainer">
+                               <input type="submit" value="COMPUTE!" class='btn btn-primary'></form>
+                            </a>
+                        </li>
+                        {% endcomment %}
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
@@ -310,6 +412,7 @@
         </footer>
 
     </div>
+
 </div>
 
 
@@ -381,7 +484,7 @@
 
         	$.notify({
             	icon: 'pe-7s-bell',
-            	message: "Welcome to the <b>Multiaxial Fatigue</b> welcome page, enjoy the intro video. Work your way through the forms for your model and then enjoy the results."
+            	message: "<b>Multiaxial Fatigue Results</b> - here you will find all of the results for each multiaxial model that was selected."
 
             },{
                 type: 'warning',
@@ -562,106 +665,6 @@
             $('#allInputsFormValidation').validate();
 
         });
-    </script>
-
-    <script type="text/javascript">
-    // WIZARD SCRIPT
-        $().ready(function(){
-
-            var $validator = $("#wizardForm").validate({
-    		  rules: {
-    		    email: {
-                    required: true,
-                    email: true,
-                    minlength: 5
-    		    },
-    		    first_name: {
-    		        required: false,
-                    minlength: 5
-    		    },
-    		    last_name: {
-    		        required: false,
-                    minlength: 5
-    		    },
-    		    website: {
-    		        required: true,
-                    minlength: 5,
-                    url: true
-    		    },
-    		    framework: {
-        		    required: false,
-        		    minlength: 4
-    		    },
-    		    cities: {
-        		    required: true
-    		    },
-    		    price:{
-        		    number: true
-    		    }
-    		  }
-    		});
-
-
-
-            // you can also use the nav-pills-[blue | azure | green | orange | red] for a different color of wizard
-
-            $('#wizardCard').bootstrapWizard({
-            	tabClass: 'nav nav-pills',
-            	nextSelector: '.btn-next',
-                previousSelector: '.btn-back',
-            	onNext: function(tab, navigation, index) {
-            		var $valid = $('#wizardForm').valid();
-
-            		if(!$valid) {
-            			$validator.focusInvalid();
-            			return false;
-            		}
-            	},
-                onInit : function(tab, navigation, index){
-
-                    //check number of tabs and fill the entire row
-                    var $total = navigation.find('li').length;
-                    $width = 100/$total;
-
-                    $display_width = $(document).width();
-
-                    if($display_width < 600 && $total > 3){
-                       $width = 50;
-                    }
-
-                    navigation.find('li').css('width',$width + '%');
-                },
-                onTabClick : function(tab, navigation, index){
-                    // Disable the posibility to click on tabs
-                    return false;
-                },
-                onTabShow: function(tab, navigation, index) {
-                    var $total = navigation.find('li').length;
-                    var $current = index+1;
-
-                    var wizard = navigation.closest('.card-wizard');
-
-                    // If it's the last tab then hide the last button and show the finish instead
-                    if($current >= $total) {
-                        $(wizard).find('.btn-next').hide();
-                        $(wizard).find('.btn-finish').show();
-                    } else if($current == 1){
-                        $(wizard).find('.btn-back').hide();
-                    } else {
-                        $(wizard).find('.btn-back').show();
-                        $(wizard).find('.btn-next').show();
-                        $(wizard).find('.btn-finish').hide();
-                    }
-                }
-
-            });
-
-        });
-
-        function onFinishWizard(){
-            //here you can do something, sent the form to server via ajax and show a success message with swal
-            swal("Good job!", "You clicked the finish button!", "success");
-        }
     </script>
 
     <script>

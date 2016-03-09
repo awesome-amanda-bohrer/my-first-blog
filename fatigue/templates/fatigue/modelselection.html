@@ -153,7 +153,7 @@
                     <h1 class='text-center'>The "Fatigue by E2G" Model Selection</h1>
                     <h3 class='text-center'>Lets begin by selecting the fatigue model(s) components of interest!</h3>
                     <hr>
-                    <div class="col-md-9 col-md-offset-half">
+                    <div class="col-md-10 col-md-offset-1">
                         </br>
                         <div class="card">
                             </br>
@@ -173,18 +173,11 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <h4 class="title text-center">Select model(s) of interest and then "CREATE MODEL"</h4><hr>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9 col-md-offset-half">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="uniaxialfeatures">
-                                <div class="card">
-                                    <div class="header">
-                                        <h4 class="title">Select model(s) of interest and then "CREATE MODEL"</h4>
-                                    </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="uniaxialfeatures">
                                     <div class="content">
-                                        <hr>
                                         <form method=POST action="/fatigue/uniaxial/">{% csrf_token %}
                                         <div class='row'>
                                     		<div class="form-group">
@@ -213,53 +206,11 @@
                                             <input type="submit" value="CREATE MODEL" class='btn btn-primary'></form>
                                         </h2>
 
-                                        {% comment %}
-                                        {% if PlasticityIdentifier == 'yes' %}
-                                            <form method=POST action="/fatigue/uniaxial/uniplasticity/">{% csrf_token %}
-                                            <input name="uniplasticity" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% if CycleIdentifier == 'yes' %}
-                                                <input name="unicycle" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% endif %}
-                                            {% if DamageIdentifier == 'yes' %}
-                                                <input name="unidamage" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% endif %}
-                                            </form>
-                                        {% endif %}
-                                        {% if PlasticityIdentifier != 'yes' and CycleIdentifier == 'yes' %}
-                                            <form method=POST action="/fatigue/uniaxial/unicycle/">{% csrf_token %}
-                                            {% if PlasticityIdentifier == 'yes' %}
-                                                <input name="uniplasticity" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% endif %}
-                                            <input name="unicycle" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% if DamageIdentifier == 'yes' %}
-                                                <input name="unidamage" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% endif %}
-                                            </form>
-                                        {% endif %}
-                                        {% if PlasticityIdentifier != 'yes' and CycleIdentifier != 'yes' and DamageIdentifier == 'yes' %}
-                                            <form method=POST action="/fatigue/uniaxial/unidamage/">{% csrf_token %}
-                                            {% if PlasticityIdentifier == 'yes' %}
-                                                <input name="uniplasticity" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% endif %}
-                                            {% if CycleIdentifier == 'yes' %}
-                                                <input name="unicycle" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            {% endif %}
-                                            <input name="unidamage" id="item4" value="yes" class="hidden" autocomplete="off">
-                                            </form>
-                                        {% endif %}
-                                        {% endcomment %}
-
                                     </div>
 
                                 </div>
-                            </div>
 
-                            <div class="tab-pane" id="multiaxialfeatures">
-                                <div class="card">
-                                    <div class="header">
-                                        <h4 class="title">Select model(s) of interest and then "CREATE MODEL"</h4>
-                                    </div>
-                                    <hr>
+                                <div class="tab-pane" id="multiaxialfeatures">
 
                                     <div class="content">
                                         <form method=POST action="/fatigue/multiaxial/">{% csrf_token %}
@@ -293,10 +244,9 @@
                                     </div>
 
                                 </div>
-                            </div>
 
-                        </div> <!-- end tab content -->
-
+                            </div> <!-- end tab content -->
+                        </div>
                     </div> <!-- end col-md-8 -->
                 </div>
             </div>

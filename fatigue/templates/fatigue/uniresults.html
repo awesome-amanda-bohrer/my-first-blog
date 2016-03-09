@@ -229,56 +229,112 @@
     	<div class="content" style="background-image: url('{% get_static_prefix %}homepage/RefineryBackground.png');">
             <div class="container-fluid">
                 <div class="row">
+                    </br>
+                    <h1 class='text-center'>The "Fatigue by E2G" Uniaxial Results</h1>
+                    <hr>
                     <div class="col-md-12">
-                        <div class="nav-container">
-                            <ul class="nav nav-icons" role="tablist">
-                                <li class="active">
-                                    <a href="#uniresults" role="tab" data-toggle="tab">
-                                        </br><h1>Uniaxial Results</h1>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <hr></br>
-                        {% if PlasticityIdentifier == 'yes' %}
+                        </br></br>
                         <div class="card">
-                            <div class="header">
-                                <h4 class="title">Plasticity Correction</h4>
-                                <p class="category">Here is some text</p>
+                            <div class="nav-container">
+                                </br>
+                                <ul class="nav nav-icons" role="tablist">
+                                    {% if PlasticityIdentifier == 'yes' %}
+                                    <li class="active">
+                                        <a href="#description-logo" role="tab" data-toggle="tab">
+                                            <h2>Plasticity Correction</h2>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    {% if CycleIdentifier == 'yes' %}
+                                    <li>
+                                        <a href="#map-logo" role="tab" data-toggle="tab">
+                                            <h2>Cycle Counting</h2>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    {% if DamageIdentifier == 'yes' %}
+                                    <li>
+                                        <a href="#legal-logo" role="tab" data-toggle="tab">
+                                            <h2>Fatigue Damage</h2>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                                <hr>
                             </div>
 
-                            <div class="content">
-                                <p>Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
-                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% if CycleIdentifier == 'yes' %}
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Cycle Counting</h4>
-                                <p class="category">Here is some text</p>
-                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="description-logo">
+                                    <div class="header">
+                                        <h3 class="title">Uniaxial Plasticity Correction Results</h3>
+                                    </div>
 
-                            <div class="content">
-                                <p>Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
-                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% if DamageIdentifier == 'yes' %}
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Fatigue Damage</h4>
-                                <p class="category">Here is some text</p>
-                            </div>
+                                    <div class="content">
+                                        <div class='row'>
+                                            <div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}UniaxialPlasticityCorrection/Stress.png" alt="" class="img-thumbnail">
+                        		            </div>
+                                    		<div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}UniaxialPlasticityCorrection/Strain.png" alt="" class="img-thumbnail">
+                            		        </div>
+                                    		<div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}UniaxialPlasticityCorrection/StressStrainIncremental.png" alt="" class="img-thumbnail">
+                            		        </div>
+                        		        </div>
+                                    </div>
+                                </div>
 
-                            <div class="content">
-                                <p>Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.</p>
-                                <p>Larger, yet dramatically thinner.It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                            </div>
+                                <div class="tab-pane" id="map-logo">
+                                    <div class="header">
+                                        <h3 class="title">Uniaxial Cycle Counting Results</h3>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class='row'>
+                                            <div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}UniaxialDamage/output.png" alt="" class="img-thumbnail">
+                        		            </div>
+                                    		<div class="col-md-3">
+                                		        <img src="{% get_static_prefix %}UniaxialDamage/output2.png" alt="" class="img-thumbnail">
+                            		        </div>
+                                    		<div class="col-md-3">
+                                		        <img img src="{% get_static_prefix %}UniaxialDamage/stressoutput.png" alt="" class="img-thumbnail">
+                            		        </div>
+                        		        </div>
+                        		        <div class='row'>
+                        		            <h3 class='text-center'>
+                        		            Cycle Count</br>
+                                            1. From t = [1] to t = [2] with Range = [0.04]</br>
+                                            2. From t = [5] to t = [6] with Range = [0.03]</br>
+                                            3. From t = [4] to t = [7] with Range = [0.07]</br>
+                                            4. From t = [0] to t = [3] with Range = [0.09]</br>
+                                            </h3>
+                        		        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="legal-logo">
+                                    <div class="header">
+                                        <h3 class="title">Uniaxial Fatigue Damage Results</h3>
+                                    </div>
+
+                                    <div class="content">
+                        		        <div class='row'>
+                        		            <h3 class='text-center'>
+                        		            Uniaxial Damage Factor (Strain-Life with no Mean Stress) = 0.0432881961183</br>
+                                            Number of Permissible Cycles (Strain-Life with no Mean Stress) = 23.1009857114</br>
+                                            </br>
+                                            Uniaxial Damage Factor (Strain-Life with Mean Stress) = 0.0432625257845</br>
+                                            Number of Permissible Cycles (Strain-Life with Mean Stress) = 23.1146929558</br>
+                                            </br>
+                                            Uniaxial Damage Factor (Smith Watson Topper) = 0.043552411489</br>
+                                            Number of Permissible Cycles (Smith Watson Topper) = 22.9608411064</br>
+                                            </h3>
+                        		        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end tab content -->
                         </div>
-                        {% endif %}
                     </div> <!-- end col-md-8 -->
                 </div>
                 <h1 class="text-right">

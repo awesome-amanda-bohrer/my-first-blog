@@ -1,7 +1,7 @@
 from django.shortcuts import render,render_to_response
 from django.template import RequestContext
-from models import InputForm,UploadModel
-from forms import UploadForm
+from models import InputForm,UploadModel,InputForm2,UploadModel2
+from forms import UploadForm,UploadForm2
 import os,glob
 
 def my_fatigue(request):
@@ -383,7 +383,311 @@ def my_uniresults(request):
 #
 #
 def my_multiaxial(request):
-    return render(request, 'fatigue/multiaxial.html')
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm2(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('multiplasticity')
+        CycleIdentifier         = request.POST.getlist('multicycle')
+        DamageIdentifier        = request.POST.getlist('multidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm2(request.POST, request.FILES)
+            FileName   = request.FILES['upload2']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel2(upload2 = request.FILES['upload2'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm2()
+        formupload = UploadForm2()
+
+    return render_to_response('fatigue/multiaxial.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+
+def my_multiplasticity(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm2(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('multiplasticity')
+        CycleIdentifier         = request.POST.getlist('multicycle')
+        DamageIdentifier        = request.POST.getlist('multidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm2(request.POST, request.FILES)
+            FileName   = request.FILES['upload2']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel2(upload2 = request.FILES['upload2'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm2()
+        formupload = UploadForm2()
+
+    return render_to_response('fatigue/multiplasticity.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_multicycle(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm2(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('multiplasticity')
+        CycleIdentifier         = request.POST.getlist('multicycle')
+        DamageIdentifier        = request.POST.getlist('multidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm2(request.POST, request.FILES)
+            FileName   = request.FILES['upload2']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel2(upload2 = request.FILES['upload2'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm2()
+        formupload = UploadForm2()
+
+
+    return render_to_response('fatigue/multicycle.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_multidamage(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm2(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('multiplasticity')
+        CycleIdentifier         = request.POST.getlist('multicycle')
+        DamageIdentifier        = request.POST.getlist('multidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm2(request.POST, request.FILES)
+            FileName   = request.FILES['upload2']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel2(upload2 = request.FILES['upload2'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm2()
+        formupload = UploadForm2()
+
+    return render_to_response('fatigue/multidamage.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
+#
+def my_multiresults(request):
+
+    PlasticityIdentifier = 0.0
+    CycleIdentifier      = 0.0
+    DamageIdentifier     = 0.0
+    form2 = 0.0
+    newupload = 0.0
+    formupload = 0.0
+    FileName = 0.0
+    if request.method == 'POST':
+        form = InputForm2(request.POST)
+        PlasticityIdentifier    = request.POST.getlist('multiplasticity')
+        CycleIdentifier         = request.POST.getlist('multicycle')
+        DamageIdentifier        = request.POST.getlist('multidamage')
+
+        try:
+            PlasticityIdentifier    = str(PlasticityIdentifier[0])
+        except:
+            PlasticityIdentifier    = str(PlasticityIdentifier)
+        try:
+            CycleIdentifier         = str(CycleIdentifier[0])
+        except:
+            CycleIdentifier         = str(CycleIdentifier)
+        try:
+            DamageIdentifier        = str(DamageIdentifier[0])
+        except:
+            DamageIdentifier        = str(DamageIdentifier)
+
+        try:
+            formupload = UploadForm2(request.POST, request.FILES)
+            FileName   = request.FILES['upload2']
+            try:
+                FileName   = str(FileName)
+                os.remove('NumpySin/media/fatigue/' + FileName)
+            except:
+                FileName   = FileName
+            if form.is_valid():
+                form2 = form.save(commit=False)
+                newupload = UploadModel2(upload2 = request.FILES['upload2'])
+                try:
+                    newupload.save()
+                except:
+                    newupload = newupload
+        except:
+            if form.is_valid():
+                form2 = form.save(commit=False)
+
+    else:
+        form = InputForm2()
+        formupload = UploadForm2()
+
+    return render_to_response('fatigue/multiresults.html',
+            {'PlasticityIdentifier': PlasticityIdentifier,
+             'CycleIdentifier': CycleIdentifier,
+             'DamageIdentifier': DamageIdentifier,
+             'form': form,
+             'newupload': newupload,
+             'formupload': formupload,
+             'FileName': FileName,
+             }, context_instance=RequestContext(request))
 #
 #
 #
