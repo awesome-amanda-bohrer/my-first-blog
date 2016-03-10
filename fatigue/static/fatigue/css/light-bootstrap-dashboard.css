@@ -3242,7 +3242,7 @@ legend {
   margin-right: -21px;
   padding-right: 17px;
   z-index: 4;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 10px);
 }
 .sidebar .sidebar-wrapper > .nav {
   margin-top: 20px;
