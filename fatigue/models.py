@@ -20,7 +20,7 @@ class InputForm(ModelForm):
     class Meta:
         model = Input
         # omit the fields totally
-        #fields = "__all__" - This was for Django >1.8
+        fields = "__all__"
 
 class Input2(models.Model):
     b = models.FloatField(verbose_name='Fatigue Strength Exponent, b = ', default=-0.087)
