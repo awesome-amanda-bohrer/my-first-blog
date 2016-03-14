@@ -3644,6 +3644,9 @@ tbody.collapse.in {
     right: auto;
     left: 0;
   }
+ @media (min-width: 768px) {
+  .navbar {
+   padding-left: 225px;
 }
 .btn-group,
 .btn-group-vertical {
@@ -4272,13 +4275,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;
-  border-width: 1px 0 0;
+  border-width: 0 0 1px;
 }
 .navbar-brand {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 18px;
+  padding-right: 0px;
+  font-size: 28px;
   line-height: 20px;
 }
 .navbar-brand:hover,
