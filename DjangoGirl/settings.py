@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'fatigue_test',
     'corrosion',
     'fatigue',
-    'custom',
 ]
 
 MIDDLEWARE_CLASSES = [
