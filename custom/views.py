@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def my_blankpage(request):
+    return render(request, 'custom/blank-page.html')
+#
+#
+#
