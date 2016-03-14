@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^fatigue_test/'    ,   include('fatigue_test.urls'))  ,
     url(r'^corrosion/'       ,   include('corrosion.urls'))     ,
     url(r'^fatigue/'         ,   include('fatigue.urls'))       ,
-    url(r'^custom/'         ,   include('custom.urls'))       ,
+    url(r'^custom/'          ,   include('custom.urls'))        ,
 ]
 
