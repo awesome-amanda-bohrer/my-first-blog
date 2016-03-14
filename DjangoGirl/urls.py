@@ -21,7 +21,6 @@ urlpatterns = [
     url(r'^hottap/'          ,   include('hottap.urls'))        ,
     url(r'^fatigue_test/'    ,   include('fatigue_test.urls'))  ,
     url(r'^corrosion/'       ,   include('corrosion.urls'))     ,
-    url(r'^fatigue/'         ,   include('fatigue.urls'))       ,
     url(r'^bohrer/'          ,   include('bohrer.urls'))        ,
 ]
 
