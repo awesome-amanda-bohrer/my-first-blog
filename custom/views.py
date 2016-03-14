@@ -5,3 +5,13 @@ def my_blankpage(request):
 #
 #
 #
+def my_index(request):
+    return render(request, 'custom/index.html')
+#
+#
+#
+def my_indexrtl(request):
+    return render(request, 'custom/index-rtl.html')
+#
+#
+#
