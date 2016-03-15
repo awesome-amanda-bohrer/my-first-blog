@@ -243,10 +243,10 @@ th {
   }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important;
+    border-top-color: #00337F !important;
   }
   .label {
-    border: 1px solid #000;
+    border: 1px solid #00337F;
   }
   .table {
     border-collapse: collapse !important;
@@ -1097,12 +1097,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #A73F10;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #fff;
   text-decoration: underline;
 }
 a:focus {
