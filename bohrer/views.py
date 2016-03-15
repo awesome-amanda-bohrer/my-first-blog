@@ -10,8 +10,13 @@ def mychartsview(request):
 #
 #
 #
-def myblankpagesview(request):
-    return render(request, 'bohrer/blank-page.html')
+def myselectionview(request):
+    return render(request, 'bohrer/selection.html')
+#
+#
+#
+def myinputview(request):
+    return render(request, 'bohrer/input.html')
 #
 #
 #
