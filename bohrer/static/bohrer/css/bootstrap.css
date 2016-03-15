@@ -243,10 +243,10 @@ th {
   }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #00337F !important;
+    border-top-color: #000 !important;
   }
   .label {
-    border: 1px solid #00337F;
+    border: 1px solid #000;
   }
   .table {
     border-collapse: collapse !important;
@@ -1097,12 +1097,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #A73F10;
+  color: #337ab7;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #fff;
+  color: #23527c;
   text-decoration: underline;
 }
 a:focus {
@@ -1608,6 +1608,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  height:auto;
+  min-height:100%;
 }
 .row {
   margin-right: -15px;
@@ -3644,9 +3646,6 @@ tbody.collapse.in {
     right: auto;
     left: 0;
   }
- @media (min-width: 768px) {
-  .navbar {
-   padding-left: 225px;
 }
 .btn-group,
 .btn-group-vertical {
@@ -4275,13 +4274,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;
-  border-width: 0 0 1px;
+  border-width: 1px 0 0;
 }
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 15px 255px;
-  font-size: 18px;
+  padding: 15px 15px;
+  font-size: 24px;
   line-height: 20px;
 }
 .navbar-brand:hover,
