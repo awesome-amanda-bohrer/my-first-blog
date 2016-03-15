@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="/static/bohrer/css/sb-admin.css" rel="stylesheet">
-    <link href="/static/bohrer/css/selection.css" rel="stylesheet">
+    <link href="/static/bohrer/css/input.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="/static/bohrer/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -86,7 +86,201 @@
 
         <div id="page-wrapper">
 
- 
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<div class="container">
+    <!-- Step Wizard -->
+            <div class="stepwizard">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step">
+                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <p>Step 1</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p>Step 2</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <p>Step 3</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step Wizard END -->
+            <!-- quote form -->
+            <form class="form-horizontal" role="form" method="post" autocomplete="on" spellcheck="true">
+            
+                <fieldset><!-- form contents -->
+
+                    <!-- Wizard STEP 1 -->
+                    <div class="row setup-content" id="step-1">
+                        <div class="col-sm-12">
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="col-sm-2 control-label" for="textinput">Name</label>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                  <input autocomplete="on" type="text" placeholder="Full Name" class="form-control" required>
+                                  <span class="input-group-addon label-danger"><i class="fa fa-user fa-lg text-white"></i></span>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="col-sm-2 control-label" for="textinput">Email</label>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                  <input type="email" placeholder="Email Address" class="form-control" required>
+                                  <span class="input-group-addon label-danger"><i class="fa fa-envelope fa-lg text-white"></i></span>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="col-sm-2 control-label" for="textinput">Company</label>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                  <input type="text" placeholder="Your business name" class="form-control" required>
+                                  <span class="input-group-addon label-danger"><i class="fa fa-building fa-lg text-white"></i></span>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="col-sm-2 control-label" for="textinput">Tel</label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                  <input type="tel" placeholder="Main Contact #" class="form-control">
+                                  <span class="input-group-addon bg-success"><i class="fa fa-phone fa-lg text-white"></i></span>
+                                </div>
+                            </div>
+
+                            <label class="col-sm-2 control-label" for="textinput">Postcode</label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                  <input id="postcode" type="text" placeholder="Post Code" class="form-control">
+                                  <span class="input-group-addon bg-success"><i class="fa fa-map-marker fa-lg text-white"></i></span>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-2 control-label" for="industry">Industry</label>
+                            <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon label-danger"><i class="fa fa-briefcase fa-lg text-white"></i></span>
+                                <select id="industry" class="form-control">
+                                  <option value="" selected disabled>Choose One:</option>
+                                  <option value="Accountancy">Accountancy</option>
+                                  <option value="Agricultural">Agricultural</option>
+                                  <option value="Automotive">Automotive</option>
+                                </select>
+                              </div>
+                              </div>
+                            </div>
+                            <p style="display:inline;" class="small col-xs-9 col-sm-offset-2 col-sm-7 text-SI-grey">this is a block of copy for you to write some blurb.</p>
+                            <button class="btn btn-primary nextBtn col-xs-3 pull-right" type="button" >Next Step <i class="fa fa-angle-double-right"></i> </button>
+                        </div>
+                    </div>
+                    <!-- Wizard STEP 1 END -->
+                    
+                    <!-- Wizard STEP 2 -->
+                    <div class="row setup-content" id="step-2">
+                        <div class="col-sm-12">
+                    
+                          <div class="form-group">
+                            
+								<!-- Text input-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="textinput">Requirements</label>
+									<div class="col-sm-10">
+										<div class="input-group">
+										<textarea rows="6" placeholder="What additional specifics do you require?" class="form-control" required></textarea>
+										  <span class="input-group-addon bg-success"><i class="fa fa-list-ol fa-lg text-white"></i></span>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Text input-->
+								  <div class="form-group">
+									<label class="col-sm-2 control-label" for="textinput">Web URL</label>
+									<div class="col-sm-10">
+										<div class="input-group">
+										  <input type="url placeholder="www.mybusiness.co.uk" class="form-control" required>
+										  <span class="input-group-addon bg-success"><i class="fa fa-globe fa-lg text-white"></i></span>
+										</div>
+									</div>
+								  </div>
+								
+								<p style="display:inline;" class="small col-xs-9 col-sm-offset-2 col-sm-7">this is a block of copy for you to write some blurb.</p>
+								<button class="btn btn-primary nextBtn col-xs-3 pull-right" type="button" >Next Step <i class="fa fa-angle-double-right"></i> </button>
+							</div>
+						</div>
+					</div>
+                    <!-- Wizard STEP 2 END -->
+                    
+                    <!-- Wizard STEP 3 -->
+                    <div class="row setup-content" id="step-3">
+                      <div class="col-sm-12">
+                      
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                            
+                            <hr>
+                            
+                                <ul class="list-inline">
+                                    <li>Process step 1 <i class="fa fa-chevron-right fa-fw text-success"></i></li>
+                                    <li>Process step 2 <i class="fa fa-chevron-right fa-fw text-success"></i></li>
+                                    <li>Process step 3 <i class="fa fa-chevron-right fa-fw text-success"></i></li>
+                                    <li>Process step 4 <i class="fa fa-smile-o fa-fw text-success"></i></li>
+                                    <button class="btn btn-info btn-xs hidden-xs pull-right">example</button>
+                                </ul>
+                                
+                                <div class="row">
+                                    <i class="fa fa-info-circle fa-3x half-top text-danger col-xs-2"></i>
+                                    <p class="small col-xs-10">add some blurb here to explain the above process</p>
+                                </div>
+                                
+                            <hr>
+                            
+							<div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10 clearfix">
+                                <div class="row">
+                                  <div class=" col-sm-8">
+                                    <p>add recapatcha here
+                                    <!--<div class="g-recaptcha modal-recaptcha" data-sitekey="recapatcha key here"></div>-->
+                                  </div>
+
+                                  <!-- SUBMIT FORM BUTTON-->
+                                  <div class="col-sm-4 pull-right">
+                                    <button type="submit" value="submit" class="btn btn-block btn-success">Send</button>
+                                  </div>
+                                  <!-- SUBMIT FORM BUTTON END-->
+                                </div>
+                            </div>
+                          </div>
+							
+                            </div>
+                          </div> 
+								                            
+                          <hr>
+                          
+                          <div class="col-xs-12">
+                            <div class="row" style="margin-top:-20px;">
+                                <div class="col-sm-3"><h3>SHARE <i class="fa fa-angle-double-right"></i></h3></div>
+                                <div "pull-right col-sm-9 add-top">Add your share code here</div>
+                            </div>
+                          </div>
+                          
+						</div>
+                      </div>
+                    <!-- Wizard STEP 3 END -->
+                </fieldset><!-- form contents END -->
+            </form>
+</div>
 
         </div>
         <!-- /#page-wrapper -->
@@ -96,6 +290,7 @@
 
     <!-- jQuery -->
     <script src="/static/bohrer/js/jquery.js"></script>
+    <script src="/static/bohrer/js/input.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/bohrer/js/bootstrap.min.js"></script>
