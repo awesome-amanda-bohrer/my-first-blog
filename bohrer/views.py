@@ -20,6 +20,11 @@ def myinputview(request):
 #
 #
 #
+def mysleeveview(request):
+    return render(request, 'bohrer/sleeve.html')
+#
+#
+#
 def myelementsview(request):
     return render(request, 'bohrer/bootstrap-elements.html')
 #

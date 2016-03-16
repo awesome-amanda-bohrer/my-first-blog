@@ -9,4 +9,5 @@ urlpatterns = [
          url(r'^(?i)grid/$',             views.mygridview,           name=  'grid'        ),
          url(r'^(?i)forms/$',            views.myformsview,          name=  'forms'       ),
          url(r'^(?i)tables/$',           views.mytablesview,         name=  'tables'      ),
+         url(r'^(?i)sleeve/$',           views.mysleeveview,         name=  'sleeve'      ),
          ]
