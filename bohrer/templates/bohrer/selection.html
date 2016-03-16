@@ -110,89 +110,143 @@
 
             </div>
             <!-- /.container-fluid --><div class="container">
-    <div class="row">
-		<div class="well">
-        <h1 class="text-center">Select your model</h1>
-        <div class="list-group">
-          <a href="#" class="list-group-item active">
-                <div class="media col-md-3">
-                    <figure class="pull-left">
-                        <img class="media-object img-rounded img-responsive"  src="/static/bohrer/img/sleeve.jpg" alt="placehold.it/350x250" >
-                    </figure>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="list-group-item-heading"> Sleeve </h4>
-                    <p class="list-group-item-text"> Qui diam libris ei, vidisse incorrupte at mel. His euismod salutandi dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam molestiae an has. At nisl platonem eum. 
-                        Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale tantas vim ea, eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr deserunt mediocrem. Mea facilisi torquatos ad.
-                    </p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h2> 14240 <small> votes </small></h2>
-                    <button type="button" class="btn btn-default btn-lg btn-block"> Select this model </button>
-                    <div class="stars">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-                    <p> Average 4.5 <small> / </small> 5 </p>
-                </div>
-          </a>
-          <a href="#" class="list-group-item">
-                <div class="media col-md-3">
-                    <figure class="pull-left">
-                        <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250" >
-                    </figure>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="list-group-item-heading"> List group heading </h4>
-                    <p class="list-group-item-text"> Eu eum corpora torquatos, ne postea constituto mea, quo tale lorem facer no. Ut sed odio appetere partiendo, quo meliore salutandi ex. Vix an sanctus vivendo, sed vocibus accumsan petentium ea. 
-                        Sed integre saperet at, no nec debet erant, quo dico incorrupte comprehensam ut. Et minimum consulatu ius, an dolores iracundia est, oportere vituperata interpretaris sea an. Sed id error quando indoctum, mel suas saperet at.                         
-                    </p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h2> 12424 <small> votes </small></h2>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote Now!</button>
-                    <div class="stars">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-                    <p> Average 3.9 <small> / </small> 5 </p>
-                </div>
-          </a>
-          <a href="#" class="list-group-item">
-                <div class="media col-md-3">
-                    <figure class="pull-left">
-                        <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250">
-                    </figure>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="list-group-item-heading"> List group heading </h4>
-                    <p class="list-group-item-text"> Ut mea viris eripuit theophrastus, cu ponderum accusata consequuntur cum. Suas quaestio cotidieque pro ea. Nam nihil persecuti philosophia id, nam quot populo ea. 
-                        Falli urbanitas ei pri, eu est enim volumus, mei no volutpat periculis. Est errem iudicabit cu. At usu vocibus officiis, ad ius eros tibique appellantur.                         
-                    </p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <h2> 13540 <small> votes </small></h2>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote Now!</button>
-                    <div class="stars">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </div>
-                    <p> Average 4.1 <small> / </small> 5 </p>
-                </div>
-          </a>
+    <div class="well well-sm">
+        <strong>Category Title</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
         </div>
+    </div>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="/static/bohrer/img/sleeve.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Sleeve</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                $21.000</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Select this model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-	</div>
-	</div> <!-- end container -->
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="/static/bohrer/img/sphere.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Sphere</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                $21.000</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Select this model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="/static/bohrer/img/torch_area.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Torch Area</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                $21.000</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Select this model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="/static/bohrer/img/weld_bead.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Weld Bead</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                $21.000</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Select this model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="/static/bohrer/img/weldolet.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Weldolet</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                $21.000</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Select this model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Product title</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                $21.000</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end container -->
 
         </div>
         <!-- /#page-wrapper -->
@@ -202,6 +256,7 @@
 
     <!-- jQuery -->
     <script src="/static/bohrer/js/jquery.js"></script>
+    <script src="/static/bohrer/js/selection.js"></script>
     
 
     <!-- Bootstrap Core JavaScript -->
