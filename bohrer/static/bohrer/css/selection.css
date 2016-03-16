@@ -1,22 +1,10 @@
-body {
-  padding-top: 50px;
+a.list-group-item {
+    height:auto;
+    min-height:220px;
 }
- 
-.thumbnail {
-    position:relative;
-    overflow:hidden;
+a.list-group-item.active small {
+    color:#fff;
 }
- 
-.caption {
-    position:absolute;
-    top:0;
-    right:0;
-    background:rgba(90, 90, 90, 0.75);
-    width:100%;
-    height:100%;
-    padding:2%;
-    display: none;
-    text-align: left;
-    color:#fff !important;
-    z-index:2;
+.stars {
+    margin:20px auto 1px;    
 }
